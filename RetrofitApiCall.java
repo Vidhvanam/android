@@ -82,4 +82,10 @@ public class RetrofitApiCall extends AppCompatActivity {
         @GET("users")
         Call<Example> createPost(@Query("page") int page);
     }
+
+public interface ApiInterface {
+    @Headers({"Content-Type: application/json"})
+    @POST("v1/chat/completions")
+    Call<CompletionResponse> chatCompletion(@Header("Authorization") String authorization, @Body CompletionRequest request);
+}
 }
