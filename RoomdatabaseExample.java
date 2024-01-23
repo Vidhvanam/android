@@ -19,7 +19,12 @@ import android.util.Log;
 import com.example.myapplication.R;
 
 import java.util.List;
-
+/*
+implementation "androidx.room:room-runtime:2.2.5"
+annotationProcessor "androidx.room:room-compiler:2.2.5"
+implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.2.0"
+*/
 public class RoomdatabaseExample extends AppCompatActivity {
     private static final String TAG = "NoteActivity";
     @Override
@@ -43,10 +48,6 @@ public class RoomdatabaseExample extends AppCompatActivity {
                 }
             }
         }).start();
-
-
-
-        
     }
 
     @Entity(tableName = "notes")
